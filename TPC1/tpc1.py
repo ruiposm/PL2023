@@ -100,7 +100,7 @@ def distribuicao_por_idade(dados):
         if contagem > 0:
             percentagem = contagem_doencas[intervalo] / contagem
         else:
-            proporcao = 0.0
+            percentagem = 0.0
         percentagem_doencas[intervalo] = percentagem
     
     # Retornar o dicionário com as percentagens de doença por intervalo de idade
