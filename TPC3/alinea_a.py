@@ -1,6 +1,5 @@
 # abrindo o arquivo
 with open("processos.txt", "r") as arquivo:
-    # criando um dicionário para armazenar as informações
     processos = {}
 
     for linha in arquivo:
@@ -10,7 +9,6 @@ with open("processos.txt", "r") as arquivo:
             partes = linha.split(",")
             if len(partes) >= 6:
                 
-             #criando um dicionário para armazenar as informações do processo atual
                 processo = {
                     "pasta": partes[0],
                     "data": partes[1],
@@ -19,12 +17,10 @@ with open("processos.txt", "r") as arquivo:
                     "mae": partes[4],
                     "obs": partes[5]
                 }
-            # adicionando o processo ao dicionário de processos
                 processos[processo["nome"]] = processo
 
 frequencia_por_ano = {}
 
-# percorrendo o dicionário de processos e incrementando a contagem do ano correspondente
 for processo in processos.values():
     ano = processo["data"].split("-")[2] 
     if ano in frequencia_por_ano:
